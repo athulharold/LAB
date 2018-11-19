@@ -1,5 +1,5 @@
 #Opening SIC program
-inp = open("SIC_input.asm","r")
+inp = open("input.asm","r")
 #For output of PASS ONE
 out = open("Intermediatefile.txt","w")
 #SYMBOLTAB
@@ -61,7 +61,7 @@ for i in inp.readlines():
 			LOCCTR = str(hex(int(LOCCTR,16)+int(n[2])))
 		elif n[1]=="BYTE":
 			if n[2][0]=="X":
-				LOCCTR = str(hex(int(LOCCTR,16)+(len(n[2])-3)/2))
+				LOCCTR = str(hex(int(LOCCTR,16)+(int(len(n[2])-3/2))))
 			elif n[2][0]=="C":
 				LOCCTR = str(hex(int(LOCCTR,16)+(len(n[2])-3)))
 

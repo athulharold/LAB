@@ -37,7 +37,7 @@ while(line!=''):
 		print('Execution starts at ',ex)
 
 	line=obj.readline().strip()
-#print(mem_map)
+#print(mem_map)	
 for k in mem_map.keys():
 	t=k
 	while(len(t)<6):
